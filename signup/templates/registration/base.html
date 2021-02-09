@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(98, 221, 215);">
+    <h1 style="color:darkgoldenrod;font-weight:lighter"> Welcome to Basic Form </h1>
+    <ul style="font-size: 22px;color:black">
+        {% if user.is_authenticated %}
+            <li>Welcome, {{user.first_name}}</li>
+            <li><a href="logout">Log out</a></li>
+        {% else %}
+            <li><a href="signup">Sign Up</a></li>
+            <li><a href="login">Log In</a></li>
+        {% endif %}
+      
+    </ul>
+</body>
+</html>
